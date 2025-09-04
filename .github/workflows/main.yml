@@ -18,3 +18,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Say Hello from Job 2
         run: echo "Hello 2"
+
+  job3:
+    needs: job2   # ✅ this makes job3 wait for job2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Say Hello from Job 3
+        run: echo "Hello 3"
