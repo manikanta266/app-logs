@@ -7,11 +7,14 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    onestep:
+    steps:
       - uses: actions/checkout@v3
-      - name: Say Hello
+      - name: Say Hello from Job 1
         run: echo "Hello 1"
-     secondstep:
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
-      - name: Say Hello
+      - name: Say Hello from Job 2
         run: echo "Hello 2"
